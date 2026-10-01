@@ -1,9 +1,135 @@
 <!DOCTYPE html>
-<html>
-<head><title>Projects</title></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Sudhanva Y K</title>
+    <meta name="description" content="Projects and engineering work by Sudhanva Y K - Game logic, machine learning, and algorithmic systems.">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 <body>
-  <h1>My Projects</h1>
-  <p>Projects will be listed here.</p>
-  <a href="https://sudhanvayk.github.io/">⬅ Back to Home</a>
+    <!-- Top Sticky Navigation -->
+    <header class="site-nav">
+        <div class="nav-container">
+            <a href="../" class="nav-brand">Sudhanva Y K</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="../" class="nav-link">Home</a></li>
+                <li><a href="./" class="nav-link active">Projects</a></li>
+                <li><a href="../courses/" class="nav-link">Courses</a></li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1HeuqOxtiUb-T6UBLaHDlWJSWWvsEIELD/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="nav-resume-btn">
+                        Resume &#8599;
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Subpage Header -->
+        <div class="subpage-header">
+            <a href="../" class="back-link">&larr; Back to Home</a>
+            <h1 class="subpage-title">Projects</h1>
+            <p class="subpage-desc">A selection of things I've built, logic implementations, and ongoing software projects.</p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="cards-grid">
+            <!-- Project 1: Crop Recommendation System -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">Crop Recommendation System &#127806;</h2>
+                    <div class="card-subtitle">Machine Learning &bull; Flask Web App</div>
+                    <p class="card-desc">
+                        A full-stack machine learning web application that assists farmers and agricultural planners by predicting and recommending the optimal crop based on soil macronutrients (Nitrogen, Phosphorus, Potassium) and climate parameters like temperature, humidity, rainfall, and pH.
+                    </p>
+                    <div class="tags-list">
+                        <span class="tag">Python</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="https://github.com/sudhanvayk/crop-recommendation-system" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        View Repository &#8599;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: Rock Paper Scissors -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">Rock Paper Scissors Game</h2>
+                    <div class="card-subtitle">Interactive Web Application</div>
+                    <p class="card-desc">
+                        An interactive implementation of the classic Rock Paper Scissors game created to explore state management, deterministic win/loss logic, event handlers, and responsive styling.
+                    </p>
+                    <div class="tags-list">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">Game Logic</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="https://github.com/PES1UG25AM410/rock-paper-scissors" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        View Repository &#8599;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: AI / ML Coursework & Lab -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">AI &amp; Machine Learning Lab</h2>
+                    <div class="card-subtitle">PES University &bull; AIML Specialization</div>
+                    <p class="card-desc">
+                        Experimental pipelines, regression models, classifier benchmarks, and data preprocessing workflows developed as part of ongoing AI/ML coursework and self-directed study.
+                    </p>
+                    <div class="tags-list">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">NumPy</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <span class="btn btn-secondary" style="cursor: default;">In Development</span>
+                </div>
+            </div>
+
+            <!-- Project 3: Competitive Programming & LeetCode -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">Algorithmic Problem Solving</h2>
+                    <div class="card-subtitle">LeetCode &bull; Data Structures &amp; Algorithms</div>
+                    <p class="card-desc">
+                        Continuous practice and implementation of optimal algorithmic solutions covering trees, graphs, dynamic programming, and hash maps with clean, efficient code.
+                    </p>
+                    <div class="tags-list">
+                        <span class="tag">C++</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Data Structures</span>
+                        <span class="tag">Algorithms</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="https://leetcode.com/u/sudhanvayk/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        LeetCode Profile &#8599;
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <p>&copy; 2026 Sudhanva Y K &bull; <a href="../" style="color: var(--primary); text-decoration: none;">Return to Home</a></p>
+        </footer>
+    </div>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

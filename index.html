@@ -3,335 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudhanva Y K - Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        .folder-grid {
-            display: flex;
-            gap: 40px;
-            justify-content: center;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .folder-card {
-            text-decoration: none;
-            color: white;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            width: 200px;
-            height: 140px;
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            font-size: 1.4em;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        .folder-card:hover {
-            transform: translateY(-6px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            color: white;
-            animation: fadeIn 1s ease-in;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .subtitle {
-            font-size: 1.3em;
-            opacity: 0.95;
-            margin-bottom: 30px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .social-links a:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        .main-content {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            margin: 20px 0;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            animation: slideUp 0.8s ease-out;
-        }
-
-        section {
-            margin-bottom: 50px;
-        }
-
-        h2 {
-            color: #667eea;
-            font-size: 2em;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        .about-text {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .skill-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            font-size: 1.2em;
-            font-weight: 600;
-            transition: transform 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px) scale(1.05);
-        }
-
-        .contact-info {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 5px solid #667eea;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin: 12px 0;
-            font-size: 1.1em;
-            line-height: 1.5;
-        }
-
-
-        .contact-item strong {
-            color: #667eea;
-            min-width: 110px;
-            font-weight: 600;
-        }
-
-
-        .contact-item a {
-            color: #764ba2;
-            text-decoration: none;
-            gap: 8px;
-            transition: color 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            color: #667eea;
-            gap: 8px;
-        }
-
-        .projects-placeholder {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            font-size: 1.2em;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: white;
-            opacity: 0.9;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-
-            .subtitle {
-                font-size: 1.1em;
-            }
-
-            .main-content {
-                padding: 20px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Sudhanva Y K | Computer Science &amp; AI/ML</title>
+    <meta name="description" content="Personal academic and engineering portfolio of Sudhanva Y K - Computer Science (AI/ML) student at PES University.">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>SUDHANVA Y K</h1>
-            <p class="subtitle">Computer Science Student | AI/ML Enthusiast | PES University</p>
-            <div class="social-links">
-                <a href="https://github.com/sudhanvayk" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/sudhanvayk/" target="_blank">LinkedIn</a>
-                <a href="https://leetcode.com/u/sudhanvayk/" target="_blank">LeetCode</a>
-            </div>
-        </header>
-
-        <div class="main-content">
-            <section id="about">
-                <h2>About Me</h2>
-                <p class="about-text">
-                    Hi! I'm Sudhanva Y K, a passionate Computer Science student specializing in Artificial Intelligence and Machine Learning at PES University. I'm constantly exploring new technologies and building my skills in programming and web development. I believe in learning by doing and am always excited to take on new challenges that push my boundaries.
-                </p>
-            </section>
-
-            <section id="education">
-                <h2>Education</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <strong>Degree:</strong> B.Tech in Computer Science (AI/ML)
-                    </div>
-                    <div class="contact-item">
-                        <strong>University:</strong> PES University 
-                    </div>
-                </div>
-            </section>
-
-            <section id="skills">
-                <h2>Skills & Technologies</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">Python</div>
-                    <div class="skill-card">C++</div>
-                    <div class="skill-card">Web Development</div>
-                </div>
-            </section>
-            <section id="folders">
-                    <h2>Explore</h2>
-                    <div class="folder-grid">
-                    <a href="./projects/" class="folder-card">
-                    📁<br>Projects
+    <!-- Top Sticky Navigation -->
+    <header class="site-nav">
+        <div class="nav-container">
+            <a href="./" class="nav-brand">Sudhanva Y K</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="./" class="nav-link active">Home</a></li>
+                <li><a href="projects/" class="nav-link">Projects</a></li>
+                <li><a href="courses/" class="nav-link">Courses</a></li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1HeuqOxtiUb-T6UBLaHDlWJSWWvsEIELD/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="nav-resume-btn">
+                        Resume &#8599;
                     </a>
-                    <a href="./courses/" class="folder-card">
-                    📁<br>Courses
-                    </a>
-                    </div>
-            </section>
-            
-            <section id="projects">
-                <h2>Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3> Rock Paper Scissors Game : <a href="https://github.com/PES1UG25AM410/rock-paper-scissors" target="_blank" class="project-link">rock-paper-scissors</a></h3>
-                        <p>An interactive Rock Paper Scissors game built to practice programming fundamentals and game logic implementation.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="certificates">
-                <h2>Certificates </h2>
-                <div class="certificates-grid">
-                    <div class="certificate-card">
-                        <div class="cert-icon"></div>
-                        <h3>Competitive Programming</h3>
-                        <p>Certifications in competitive programming demonstrating problem-solving skills and algorithmic thinking.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact">
-                <h2>Get In Touch</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <strong>Email:</strong> <a href="mailto:sudhanvayk@gmail.com">sudhanvayk@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Phone:</strong> <a href="tel:7892979580">+91 7892979580</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>GitHub:</strong> <a href="https://github.com/sudhanvayk" target="_blank">github.com/sudhanvayk</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sudhanvayk/" target="_blank">linkedin.com/in/sudhanvayk</a>
-                    </div>
-                </div>
-            </section>
+                </li>
+            </ul>
         </div>
+    </header>
 
-        <footer>
-            <p>&copy; 2026 Sudhanva Y K. All rights reserved.</p>
+    <div class="container">
+        <!-- Hero: Two-column Trestles layout -->
+        <section class="hero-trestles">
+            <!-- Sidebar with photo/avatar & social pill links -->
+            <div class="hero-sidebar">
+                <div class="profile-avatar">SYK</div>
+                <h1 class="profile-name">Sudhanva Y K</h1>
+                <p class="profile-title">Computer Science &amp; AI/ML Student<br>PES University</p>
+
+                <div class="profile-links">
+                    <a href="https://github.com/sudhanvayk" target="_blank" rel="noopener noreferrer" class="profile-link-btn">
+                        <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sudhanvayk/" target="_blank" rel="noopener noreferrer" class="profile-link-btn">
+                        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://leetcode.com/u/sudhanvayk/" target="_blank" rel="noopener noreferrer" class="profile-link-btn">
+                        <svg viewBox="0 0 24 24"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.874 5.874 0 0 0 .749 1.954l.013.02 2.658 3.093a5.792 5.792 0 0 0 4.38 2.051 5.68 5.68 0 0 0 4.045-1.68l4.475-4.482a1.373 1.373 0 0 0-1.942-1.942L11.83 18.78a2.936 2.936 0 0 1-2.091.872 2.988 2.988 0 0 1-2.264-1.06l-2.65-3.084a3.176 3.176 0 0 1-.397-1.055 3.078 3.078 0 0 1-.033-1.328 3.003 3.003 0 0 1 .684-1.189l3.858-4.13 5.41-5.789a1.373 1.373 0 0 0-.864-2.098zm6.577 7.234a1.373 1.373 0 0 0-.97 2.344l2.45 2.45a1.373 1.373 0 1 0 1.942-1.942l-2.45-2.45a1.374 1.374 0 0 0-.972-.402z"/></svg>
+                        <span>LeetCode</span>
+                    </a>
+                    <a href="mailto:sudhanvayk@gmail.com" class="profile-link-btn">
+                        <svg viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.438l6.575-7.109zm10.85 0l6.575 7.109v-12.438l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.132 8.848h24l-8.132-8.848z"/></svg>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1HeuqOxtiUb-T6UBLaHDlWJSWWvsEIELD/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="profile-link-btn" style="border-color: var(--primary-border); color: var(--primary); font-weight: 600;">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 2l5 5h-5V4zM8 12h8v2H8v-2zm0 4h8v2H8v-2zm0-8h4v2H8V8z"/></svg>
+                        <span>Resume (PDF) &#8599;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Bio -->
+            <div class="hero-bio">
+                <p>
+                    Hi there &#128075;! I'm <strong>Sudhanva Y K</strong>, a Computer Science student specializing in <strong>Artificial Intelligence and Machine Learning</strong> at <a href="https://pes.edu/" target="_blank" rel="noopener noreferrer">PES University</a>.
+                </p>
+                <p>
+                    I focus on building efficient, intelligent applications and exploring the principles of machine learning, system design, and security. Recently, I was a <strong>Research Intern at the ISFCR Centre</strong> at PES University, conducting research on automotive communication systems security.
+                </p>
+                <p>
+                    You can explore my <a href="projects/">projects</a>, view my academic <a href="courses/">coursework &amp; certifications</a>, or inspect my complete <a href="https://drive.google.com/file/d/1HeuqOxtiUb-T6UBLaHDlWJSWWvsEIELD/view?usp=sharing" target="_blank" rel="noopener noreferrer">resume</a>.
+                </p>
+
+                <div class="hero-quick-actions">
+                    <a href="projects/" class="btn btn-primary">View Projects &rarr;</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section" id="education">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">PES University</span>
+                    <span class="timeline-badge">Undergraduate</span>
+                </div>
+                <div class="timeline-meta">
+                    <strong>B.Tech in Computer Science and Engineering (AI/ML)</strong>
+                </div>
+                <p style="font-size: 0.93rem; color: var(--text-secondary); margin-top: 6px;">
+                    Focus areas include Artificial Intelligence, Machine Learning, Data Structures and Algorithms, Object-Oriented System Design, and Database Systems.
+                </p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section" id="experience">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Research Intern</span>
+                    <span class="timeline-badge">July 2026 &ndash; August 2026</span>
+                </div>
+                <div class="timeline-meta">
+                    <strong>ISFCR Centre</strong> &bull; Centre for Information Security, Forensics and Cyber Resilience, PES University
+                </div>
+                <p style="font-size: 0.94rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.65;">
+                    Researched and authored a comprehensive survey paper on <strong>Automotive Communication Systems Security</strong>, examining vulnerability vectors, modern threat models, and emerging defense mechanisms in connected vehicle architectures:
+                </p>
+                <ul style="font-size: 0.92rem; color: var(--text-secondary); margin: 10px 0 14px 20px; line-height: 1.65;">
+                    <li>Analyzed attack vectors, spoofing, and injection vulnerabilities across in-vehicle communication protocols (CAN, LIN, FlexRay, Automotive Ethernet) and wireless external interfaces (V2X, cellular, and telematics).</li>
+                    <li>Evaluated contemporary security architectures, cryptographic message authentication, secure gateways, and automotive intrusion detection systems (IDS).</li>
+                    <li>Investigated future security trends and cyber resilience paradigms for next-generation autonomous and intelligent transportation systems.</li>
+                </ul>
+                <div class="tags-list" style="margin-bottom: 0;">
+                    <span class="tag">Automotive Cybersecurity</span>
+                    <span class="tag">CAN / V2X Protocols</span>
+                    <span class="tag">Threat Modeling</span>
+                    <span class="tag">Survey Paper</span>
+                    <span class="tag">Cyber Resilience</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="section" id="skills">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="skill-cat-title">Programming Languages</div>
+                    <div class="tags-list" style="margin-bottom: 0;">
+                        <span class="tag">Python</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">C</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-cat-title">AI &amp; Machine Learning</div>
+                    <div class="tags-list" style="margin-bottom: 0;">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Neural Networks</span>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">Scikit-Learn</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-cat-title">Web &amp; Developer Tools</div>
+                    <div class="tags-list" style="margin-bottom: 0;">
+                        <span class="tag">HTML5 / CSS3</span>
+                        <span class="tag">Git &amp; GitHub</span>
+                        <span class="tag">Responsive UI</span>
+                        <span class="tag">Linux / CLI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="section" id="projects">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <a href="projects/" class="section-more-link">View all projects &rarr;</a>
+            </div>
+            <div class="cards-grid">
+                <!-- Project 1: Crop Recommendation System -->
+                <div class="card">
+                    <div>
+                        <h3 class="card-title">Crop Recommendation System &#127806;</h3>
+                        <div class="card-subtitle">Machine Learning Web Application</div>
+                        <p class="card-desc">
+                            A machine learning powered application that analyzes soil nutrient levels (Nitrogen, Phosphorus, Potassium) and climatic variables (rainfall, temperature, humidity, pH) to recommend optimal crops for cultivation.
+                        </p>
+                        <div class="tags-list">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">HTML / CSS</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/sudhanvayk/crop-recommendation-system" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            GitHub Repo &#8599;
+                        </a>
+                        <a href="projects/" class="btn btn-secondary">
+                            Details &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Rock Paper Scissors -->
+                <div class="card">
+                    <div>
+                        <h3 class="card-title">Rock Paper Scissors Game</h3>
+                        <div class="card-subtitle">Interactive Web Application</div>
+                        <p class="card-desc">
+                            An interactive Rock Paper Scissors implementation designed to explore game loop architecture, state transitions, and responsive user interfaces.
+                        </p>
+                        <div class="tags-list">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Game Logic</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/PES1UG25AM410/rock-paper-scissors" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            GitHub Repo &#8599;
+                        </a>
+                        <a href="projects/" class="btn btn-secondary">
+                            Details &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section" id="certifications">
+            <div class="section-header">
+                <h2 class="section-title">Certifications &amp; Training</h2>
+                <a href="courses/" class="section-more-link">View all coursework &rarr;</a>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div>
+                        <h3 class="card-title">PES I/O - Competitive Programming</h3>
+                        <div class="card-subtitle">PES University &bull; Verified Program</div>
+                        <p class="card-desc">
+                            Specialized program demonstrating proficiency in algorithmic problem solving, time and space complexity optimization, and advanced data structures.
+                        </p>
+                        <div class="tags-list">
+                            <span class="tag">Competitive Programming</span>
+                            <span class="tag">Algorithms</span>
+                            <span class="tag">Data Structures</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="./courses/Competative%20Programming%20Certificate%20.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            View Certificate (PDF) &#8599;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            <div class="contact-panel">
+                <div>
+                    <div class="contact-item-title">Email</div>
+                    <div class="contact-item-value">
+                        <a href="mailto:sudhanvayk@gmail.com">sudhanvayk@gmail.com</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="contact-item-title">Profiles</div>
+                    <div class="contact-item-value">
+                        <a href="https://github.com/sudhanvayk" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
+                        <a href="https://www.linkedin.com/in/sudhanvayk/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &bull;
+                        <a href="https://leetcode.com/u/sudhanvayk/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <p>&copy; 2026 Sudhanva Y K </p>
         </footer>
     </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
